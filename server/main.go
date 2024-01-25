@@ -1,10 +1,17 @@
 package main;
 
 
-
 import (
-	"fmt"
-	"log"
 	"net/http"
-);
+	"example.com/database"
+	
+)
 
+func main() {
+
+	
+	database.Connect();
+
+	http.ListenAndServe(":8080",nil);
+
+}
